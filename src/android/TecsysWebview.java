@@ -22,6 +22,11 @@ import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import android.content.Context;
+import android.os.Bundle;
+import android.os.Handler;
+import android.webkit.WebView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -47,6 +52,38 @@ public class TecsysWebview extends CordovaPlugin {
 
     private void init(final CallbackContext callbackContext) {
         Log.d(TAG, "# init");
+        
+        Log.d(TAG, "# init - Getting webview ");
+        WebView tecsysWebView = (WebView)findViewById(R.id.webview); 
+        
+        Log.d(TAG, "# init - Setting up javascript interface");
+        final JavaScriptInterface jsInterface = new JavaScriptInterface(this);    	 
+    	 
+        tecsysWebView.getSettings().setLightTouchEnabled(true);
+        tecsysWebView.getSettings().setJavaScriptEnabled(true);
+        tecsysWebView.addJavascriptInterface(jsInterface, "TECSYS");
+        tecsysWebView.loadUrl("file:///android_asset/www/index.html"); 
+        
+         Log.d(TAG, "# init - Done");
     }
     
+    public class JavaScriptInterface {
+		Context mContext;
+
+	    JavaScriptInterface(Context c) {
+	        mContext = c;
+	    }
+	    
+	    public void showToast(String webMessage){	    	
+	    	final String msgToast = webMessage;	    	
+	    	 myHandler.post(new Runnable() {
+	             @Override
+	             public void run() {
+	                 myTextView.setText(msgToast);
+	             }
+	         });
+
+	       Toast.makeText(mContext, webMessage, Toast.LENGTH_SHORT).show();
+	    }
+    }
 }
