@@ -46,6 +46,11 @@ public class TecsysWebview extends CordovaPlugin {
             this.init(callbackContext);
             return true;
         }
+	    
+	if (action.equals("test")) {
+            Toast.makeText(mContext, "This is a test", Toast.LENGTH_SHORT).show();
+            return true;
+        }
      
         return false;
     }
@@ -54,15 +59,14 @@ public class TecsysWebview extends CordovaPlugin {
         Log.d(TAG, "# init");
         
         Log.d(TAG, "# init - Getting webview ");
-        WebView tecsysWebView = (WebView)findViewById(R.id.webview); 
+	WebView cordovaWebview = new WebView(cordova.getActivity());
+        //WebView tecsysWebView = (WebView)findViewById(R.id.webview); 
         
         Log.d(TAG, "# init - Setting up javascript interface");
         final JavaScriptInterface jsInterface = new JavaScriptInterface(this);    	 
     	 
-        tecsysWebView.getSettings().setLightTouchEnabled(true);
-        tecsysWebView.getSettings().setJavaScriptEnabled(true);
-        tecsysWebView.addJavascriptInterface(jsInterface, "TECSYS");
-        tecsysWebView.loadUrl("file:///android_asset/www/index.html"); 
+        cordovaWebview.getSettings().setJavaScriptEnabled(true);
+        cordovaWebview.addJavascriptInterface(jsInterface, "TECSYS");
         
          Log.d(TAG, "# init - Done");
     }
