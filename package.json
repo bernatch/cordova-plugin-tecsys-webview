@@ -1,0 +1,21 @@
+{
+  "name": "cordova-plugin-tecsys-webview",
+  "version": "0.0.1",
+  "description": "An Android Cordova plugin that creates and bind the TECSYS webview.",
+  "cordova": {
+    "id": "cordova-plugin-tecsys-webview",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bernatch/cordova-plugin-tecsys-webview.git"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ]
+}
