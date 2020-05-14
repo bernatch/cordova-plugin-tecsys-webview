@@ -64,7 +64,7 @@ public class TecsysWebview extends CordovaPlugin {
         //WebView tecsysWebView = (WebView)findViewById(R.id.webview); 
         
         Log.d(TAG, "# init - Setting up javascript interface");
-        final JavaScriptInterface jsInterface = new JavaScriptInterface(cordovaWebview.getContext);    	 
+        final JavaScriptInterface jsInterface = new JavaScriptInterface(cordovaWebview.getContext());    	 
     	 
         cordovaWebview.getSettings().setJavaScriptEnabled(true);
         cordovaWebview.addJavascriptInterface(jsInterface, "TECSYS");
@@ -73,14 +73,14 @@ public class TecsysWebview extends CordovaPlugin {
     }
     
     public class JavaScriptInterface {
-		Context mContext;
+	Context mContext;
 
-	    JavaScriptInterface(Context c) {
-	        mContext = c;
-	    }
+	JavaScriptInterface(Context c) {
+	    mContext = c;
+	}
 	    
-	    public void showToast(String webMessage){
-	       Toast.makeText(mContext, webMessage, Toast.LENGTH_SHORT).show();
-	    }
+	public void showToast(String webMessage){
+	   Toast.makeText(mContext, webMessage, Toast.LENGTH_SHORT).show();
+	}
     }
 }
