@@ -78,15 +78,7 @@ public class TecsysWebview extends CordovaPlugin {
 	        mContext = c;
 	    }
 	    
-	    public void showToast(String webMessage){	    	
-	    	final String msgToast = webMessage;	    	
-	    	 myHandler.post(new Runnable() {
-	             @Override
-	             public void run() {
-	                 myTextView.setText(msgToast);
-	             }
-	         });
-
+	    public void showToast(String webMessage){
 	       Toast.makeText(mContext, webMessage, Toast.LENGTH_SHORT).show();
 	    }
     }
