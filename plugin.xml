@@ -2,15 +2,14 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="cordova-plugin-toastyplugin" version="0.0.1">
+        id="cordova-plugin-tecsyswebview" version="0.0.1">
     <name>TecsysWebview</name>
 
     <description>An Android Cordova plugin that creates and bind the TECSYS webview</description>
     <license>MIT</license>
 
     <keywords>cordova,android,webview</keywords>
-    <repo>https://github.com/bernatch/toastyplugin/cordova-plugin-tecsys-webview.git</repo>
-    <issue>https://github.com/bernatch/toastyplugin/issues</issue>
+    <repo>https://github.com/bernatch/cordova-plugin-tecsys-webview.git</repo>
   
     <engines>
         <engine name="cordova" version=">=4.0.0"/>
