@@ -13,20 +13,21 @@
     <issue>https://github.com/bernatch/toastyplugin/issues</issue>
   
     <engines>
-        <engine name="cordova" version=">=3.0.0"/>
+        <engine name="cordova" version=">=4.0.0"/>
     </engines>
   
-    <js-module src="www/tecsyswebview.js" name="tecsysWebiew">
-        <clobbers target="tecsysWebiew" />
+    <js-module src="www/tecsyswebview.js" name="tecsyswebiew">
+        <merges target="tecsyswebiew" />
     </js-module>
     
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="TecsysWebview">
-                <param name="android-package" value="com.tecsys.cordova.plugin.Webview"/>
+                <param name="android-package" value="org.apache.cordova.tecsys.webview.TecsysWebview"/>
+                <param name="onload" value="true" />
             </feature>
         </config-file>
 
-        <source-file src="src/android/TecsysWebview.java" target-dir="src/com/bernatch/cordova/plugin" />
+        <source-file src="src/android/TecsysWebview.java" target-dir="org/apache/cordova/tecsys/webview" />
     </platform>
 </plugin>
