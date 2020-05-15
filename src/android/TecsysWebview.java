@@ -59,6 +59,7 @@ public class TecsysWebview extends CordovaPlugin {
     private void init(final CallbackContext callbackContext) {
         Log.d(TAG, "# init");
         
+	    /*
         Log.d(TAG, "# init - Getting webview ");
 	WebView cordovaWebview = new WebView(cordova.getActivity());
         //WebView tecsysWebView = (WebView)findViewById(R.id.webview); 
@@ -68,10 +69,12 @@ public class TecsysWebview extends CordovaPlugin {
     	 
         cordovaWebview.getSettings().setJavaScriptEnabled(true);
         cordovaWebview.addJavascriptInterface(jsInterface, "TECSYS");
+	    */
         
          Log.d(TAG, "# init - Done");
     }
     
+	/*
     public class JavaScriptInterface {
 	Context mContext;
 
@@ -83,4 +86,5 @@ public class TecsysWebview extends CordovaPlugin {
 	   Toast.makeText(mContext, webMessage, Toast.LENGTH_SHORT).show();
 	}
     }
+	*/
 }
