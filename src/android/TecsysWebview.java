@@ -34,32 +34,27 @@ public class TecsysWebview extends CordovaPlugin {
 
     private static final String TAG = TecsysWebview.class.getSimpleName();
 
-    @Override
-    public void initialize(CordovaInterface cordova, CordovaWebView webView) {
-        super.initialize(cordova, webView);
-    }
-
     // Binding a Cordova string to a java method
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("init")) {
-            this.init(callbackContext);
+            //this.init(callbackContext);
             return true;
         }
 	    
 	if (action.equals("test")) {
-	    WebView cordovaWebview = new WebView(cordova.getActivity());
-            Toast.makeText(cordovaWebview.getContext(), "This is a test", Toast.LENGTH_SHORT).show();
+	    //WebView cordovaWebview = new WebView(cordova.getActivity());
+            //Toast.makeText(cordovaWebview.getContext(), "This is a test", Toast.LENGTH_SHORT).show();
             return true;
         }
      
         return false;
     }
 
+	/*
     private void init(final CallbackContext callbackContext) {
         Log.d(TAG, "# init");
         
-	    /*
         Log.d(TAG, "# init - Getting webview ");
 	WebView cordovaWebview = new WebView(cordova.getActivity());
         //WebView tecsysWebView = (WebView)findViewById(R.id.webview); 
@@ -69,10 +64,10 @@ public class TecsysWebview extends CordovaPlugin {
     	 
         cordovaWebview.getSettings().setJavaScriptEnabled(true);
         cordovaWebview.addJavascriptInterface(jsInterface, "TECSYS");
-	    */
         
          Log.d(TAG, "# init - Done");
     }
+	*/
     
 	/*
     public class JavaScriptInterface {
