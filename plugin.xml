@@ -28,6 +28,6 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/TecsysWebview.java" target-dir="org/apache/cordova/tecsys/webview" />
+        <source-file src="src/android/TecsysWebview.java" target-dir="src/org/apache/cordova/tecsyswebview" />
     </platform>
 </plugin>
