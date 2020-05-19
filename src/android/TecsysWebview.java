@@ -10,7 +10,7 @@
  * Copyright (C) Tecsys Incorporated, 2020
  */
 
-package org.apache.cordova.tecsyswebview;
+package org.apache.cordova.tecsys.webview;
 
 import android.util.Log;
 
