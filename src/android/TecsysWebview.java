@@ -15,58 +15,19 @@ package org.apache.cordova.tecsys.webview;
 import android.util.Log;
 import java.util.ArrayList;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.content.Intent;
-import android.provider.Browser;
-import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
-import android.os.Build;
-import android.os.Bundle;
-import android.text.InputType;
-import android.util.Log;
-import android.util.TypedValue;
-import android.view.Gravity;
-import android.view.KeyEvent;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.view.WindowManager.LayoutParams;
-import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
-import android.webkit.CookieManager;
-import android.webkit.HttpAuthHandler;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
-
 import org.apache.cordova.CallbackContext;
-import org.apache.cordova.Config;
-import org.apache.cordova.CordovaArgs;
-import org.apache.cordova.CordovaHttpAuthHandler;
+import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
-import org.apache.cordova.LOG;
-import org.apache.cordova.PluginManager;
 import org.apache.cordova.PluginResult;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import android.webkit.SslErrorHandler;
-import android.net.http.SslError;
-
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.StringTokenizer;
+import android.content.Context;
+import android.os.Bundle;
+import android.os.Handler;
+import android.webkit.WebView;
+import android.widget.Toast;
 
 public class TecsysWebview extends CordovaPlugin {
 
