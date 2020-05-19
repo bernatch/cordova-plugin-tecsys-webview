@@ -25,14 +25,23 @@ import org.apache.cordova.LOG;
 import org.apache.cordova.PluginManager;
 import org.apache.cordova.PluginResult;
 
+import android.webkit.CookieManager;
+import android.webkit.HttpAuthHandler;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
-import android.webkit.WebView;
-import android.widget.Toast;
 
 public class TecsysWebview extends CordovaPlugin {
 
