@@ -16,7 +16,7 @@
     </engines>
   
     <js-module src="www/tecsyswebview.js" name="tecsyswebiew">
-        <merges target="tecsyswebiew" />
+        <merges target="tecsyswebview" />
     </js-module>
     
     <platform name="android">
