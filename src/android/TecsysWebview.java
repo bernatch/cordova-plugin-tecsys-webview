@@ -20,7 +20,7 @@ import org.apache.cordova.Config;
 import org.apache.cordova.CordovaArgs;
 import org.apache.cordova.CordovaHttpAuthHandler;
 import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.CordovaWebView;
+//import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.LOG;
 import org.apache.cordova.PluginManager;
 import org.apache.cordova.PluginResult;
@@ -49,6 +49,8 @@ import android.os.Handler;
 public class TecsysWebview extends CordovaPlugin {
 
     private static final String TAG = TecsysWebview.class.getSimpleName();
+	
+    private WebView cordovaWebview;
 
     // Binding a Cordova string to a java method
     @Override
@@ -60,8 +62,8 @@ public class TecsysWebview extends CordovaPlugin {
 	    
 	if (action.equals("test")) {
 	    //WebView cordovaWebview = new WebView(cordova.getActivity());
-	    WebView cordovaWebview = null;
-	    //new WebView(cordova.getActivity());
+	    //WebView cordovaWebview = null;
+	    new WebView(cordova.getActivity());
             //Toast.makeText(cordovaWebview.getContext(), "This is a test", Toast.LENGTH_SHORT).show();
             return true;
         }
