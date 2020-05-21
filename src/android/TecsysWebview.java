@@ -64,8 +64,8 @@ public class TecsysWebview extends CordovaPlugin {
 	    Toast.makeText(cordova.getActivity(), "This is a test", Toast.LENGTH_SHORT).show();
 		
 	    //WebView cordovaWebview = new WebView(cordova.getActivity());
-	    WebView cordovaWebview = null;
-	    //cordovaWebview = new WebView(cordova.getActivity());
+	    //WebView cordovaWebview = null;
+	    cordovaWebview = new WebView(cordova.getActivity());
             
             return true;
         }
