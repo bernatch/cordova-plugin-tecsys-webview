@@ -65,7 +65,14 @@ public class TecsysWebview extends CordovaPlugin {
 		
 	    //WebView cordovaWebview = new WebView(cordova.getActivity());
 	    //WebView cordovaWebview = null;
-	    cordovaWebview = new WebView(cordova.getActivity());
+		
+	    // Create dialog in new thread
+            Runnable runnable = new Runnable() {
+	        @SuppressLint("NewApi")
+                public void run() {
+	            cordovaWebview = new WebView(cordova.getActivity());
+		}
+	    }
             
             return true;
         }
