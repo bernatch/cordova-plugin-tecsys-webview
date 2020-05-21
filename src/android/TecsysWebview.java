@@ -80,7 +80,8 @@ public class TecsysWebview extends CordovaPlugin {
                 public void run() {
 	            cordovaWebview = new WebView(cordova.getActivity());
 		}
-	    }
+	    };
+	    this.cordova.getActivity().runOnUiThread(runnable);
             
             return true;
         }
