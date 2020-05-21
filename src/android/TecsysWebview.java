@@ -12,6 +12,14 @@
 
 package org.apache.cordova.tecsys.webview;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
+import android.provider.Browser;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
+
 import android.util.Log;
 import java.util.ArrayList;
 
