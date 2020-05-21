@@ -65,7 +65,7 @@ public class TecsysWebview extends CordovaPlugin {
 		
 	    //WebView cordovaWebview = new WebView(cordova.getActivity());
 	    WebView cordovaWebview = null;
-	    cordovaWebview = new WebView(cordova.getActivity());
+	    //cordovaWebview = new WebView(cordova.getActivity());
             
             return true;
         }
