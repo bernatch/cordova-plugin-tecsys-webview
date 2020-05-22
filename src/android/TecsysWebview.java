@@ -78,7 +78,6 @@ public class TecsysWebview extends CordovaPlugin {
             Runnable runnable = new Runnable() {
 	        @SuppressLint("NewApi")
                 public void run() {
-		    //Toast.makeText(cordova.getActivity(), "Runnable", Toast.LENGTH_SHORT).show();
 	            cordovaWebview = new WebView(cordova.getActivity());
 		}
 	    };
@@ -108,7 +107,6 @@ public class TecsysWebview extends CordovaPlugin {
     }
 	*/
     
-	/*
     public class JavaScriptInterface {
 	Context mContext;
 
@@ -120,5 +118,4 @@ public class TecsysWebview extends CordovaPlugin {
 	   Toast.makeText(mContext, webMessage, Toast.LENGTH_SHORT).show();
 	}
     }
-	*/
 }
