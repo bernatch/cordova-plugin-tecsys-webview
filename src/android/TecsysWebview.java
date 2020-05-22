@@ -78,8 +78,8 @@ public class TecsysWebview extends CordovaPlugin {
             Runnable runnable = new Runnable() {
 	        @SuppressLint("NewApi")
                 public void run() {
-		    Toast.makeText(cordova.getActivity(), "Runnable", Toast.LENGTH_SHORT).show();
-	            //cordovaWebview = new WebView(cordova.getActivity());
+		    //Toast.makeText(cordova.getActivity(), "Runnable", Toast.LENGTH_SHORT).show();
+	            cordovaWebview = new WebView(cordova.getActivity());
 		}
 	    };
 	    this.cordova.getActivity().runOnUiThread(runnable);
