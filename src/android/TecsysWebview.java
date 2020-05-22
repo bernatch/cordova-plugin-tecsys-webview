@@ -69,7 +69,7 @@ public class TecsysWebview extends CordovaPlugin {
         }
 	    
 	if (action.equals("test")) {
-	    Toast.makeText(cordova.getActivity(), "This is a test", Toast.LENGTH_SHORT).show();
+	    //Toast.makeText(cordova.getActivity(), "This is a test", Toast.LENGTH_SHORT).show();
 		
 	    //WebView cordovaWebview = new WebView(cordova.getActivity());
 	    //WebView cordovaWebview = null;
@@ -78,7 +78,8 @@ public class TecsysWebview extends CordovaPlugin {
             Runnable runnable = new Runnable() {
 	        @SuppressLint("NewApi")
                 public void run() {
-	            cordovaWebview = new WebView(cordova.getActivity());
+		    Toast.makeText(cordova.getActivity(), "Runnable, Toast.LENGTH_SHORT).show();
+	            //cordovaWebview = new WebView(cordova.getActivity());
 		}
 	    };
 	    this.cordova.getActivity().runOnUiThread(runnable);
