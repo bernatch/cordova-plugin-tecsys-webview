@@ -79,6 +79,7 @@ public class TecsysWebview extends CordovaPlugin {
 	        @SuppressLint("NewApi")
                 public void run() {
 	            cordovaWebview = new WebView(cordova.getActivity());
+		    //WebView myWebView = (WebView) findViewById(R.id.webview);
 		    final JavaScriptInterface jsInterface = new JavaScriptInterface(cordova.getActivity());
 		    cordovaWebview.getSettings().setJavaScriptEnabled(true);
         	    cordovaWebview.addJavascriptInterface(jsInterface, "TECSYS");
@@ -116,7 +117,8 @@ public class TecsysWebview extends CordovaPlugin {
 	JavaScriptInterface(Context c) {
 	    mContext = c;
 	}
-	    
+	   
+	@JavascriptInterface
 	public void showToast(String webMessage){
 	   Toast.makeText(mContext, webMessage, Toast.LENGTH_SHORT).show();
 	}
