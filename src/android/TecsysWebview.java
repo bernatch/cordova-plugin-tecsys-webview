@@ -22,7 +22,7 @@ import android.graphics.drawable.Drawable;
 
 import android.util.Log;
 import java.util.ArrayList;
-import java.lang.annotation.Annotation
+import java.lang.annotation.Annotation;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.Config;
