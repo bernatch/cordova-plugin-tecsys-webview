@@ -47,7 +47,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
-import android.webkit.JavascriptInterface
+import android.webkit.JavascriptInterface;
 import android.webkit.JsResult;
 
 import org.json.JSONArray;
