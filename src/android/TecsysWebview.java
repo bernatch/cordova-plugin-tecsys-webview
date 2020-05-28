@@ -87,6 +87,8 @@ public class TecsysWebview extends CordovaPlugin {
 		    final JavaScriptInterface jsInterface = new JavaScriptInterface(cordova.getActivity());
 		    cordovaWebview.getSettings().setJavaScriptEnabled(true);
         	    cordovaWebview.addJavascriptInterface(jsInterface, "TECSYS");
+		    var testStr = cordovaWebview.getOriginalUrl();
+		    Toast.makeText(cordova.getActivity(), testStr, Toast.LENGTH_SHORT).show();
 		    Log.d(TAG, "jsInterface setup");
 		}
 	    };
