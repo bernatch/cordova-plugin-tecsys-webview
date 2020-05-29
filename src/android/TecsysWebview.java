@@ -84,12 +84,13 @@ public class TecsysWebview extends CordovaPlugin {
                 public void run() {
 	            //cordovaWebview = new WebView(cordova.getActivity());
 		    //cordovaWebview = (WebView) findViewById(android.R.id.webview);
-		    cordovaWebview = (WebView) findViewById(android.R.id.6);
+		    //cordovaWebview = (WebView) findViewById(android.R.id.6);
 		    //cordovaWebview = (WebView) cordova.getActivity().findViewById(Integer.valueOf(6));
 		    //cordovaWebview = (WebView) cordova.getActivity().getCurrentFocus();
 		    final JavaScriptInterface jsInterface = new JavaScriptInterface(cordova.getActivity());
-		    cordovaWebview.getSettings().setJavaScriptEnabled(true);
-        	    cordovaWebview.addJavascriptInterface(jsInterface, "TECSYS");
+		    //cordovaWebview.getSettings().setJavaScriptEnabled(true);
+        	    //cordovaWebview.addJavascriptInterface(jsInterface, "TECSYS");
+		    webView.addJavascriptInterface(jsInterface, "TECSYS");
 		    Log.d(TAG, "jsInterface setup");
 		}
 	    };
