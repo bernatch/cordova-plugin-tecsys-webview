@@ -83,9 +83,9 @@ public class TecsysWebview extends CordovaPlugin {
 	        @SuppressLint("NewApi")
                 public void run() {
 	            //cordovaWebview = new WebView(cordova.getActivity());
-		    cordovaWebview = (WebView) findViewById(android.R.id.webview);
+		    //cordovaWebview = (WebView) findViewById(android.R.id.webview);
 		    //cordovaWebview = (WebView) cordova.getActivity().findViewById(Integer.valueOf(6));
-		    //cordova.getActivity().getCurrentFocus();
+		    cordovaWebview = (WebView) cordova.getActivity().getCurrentFocus();
 		    final JavaScriptInterface jsInterface = new JavaScriptInterface(cordova.getActivity());
 		    cordovaWebview.getSettings().setJavaScriptEnabled(true);
         	    cordovaWebview.addJavascriptInterface(jsInterface, "TECSYS");
