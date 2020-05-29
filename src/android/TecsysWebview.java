@@ -23,7 +23,6 @@ import android.graphics.drawable.Drawable;
 import android.util.Log;
 import java.util.ArrayList;
 import java.lang.annotation.Annotation;
-import android.R;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.Config;
@@ -85,7 +84,7 @@ public class TecsysWebview extends CordovaPlugin {
                 public void run() {
 	            //cordovaWebview = new WebView(cordova.getActivity());
 		    //cordovaWebview = (WebView) findViewById(R.id.webview);
-		    cordovaWebview = (WebView) cordova.getActivity().findViewById(R.id.6);
+		    cordovaWebview = (WebView) cordova.getActivity().findViewById(Integer.valueOf(6));
 		    final JavaScriptInterface jsInterface = new JavaScriptInterface(cordova.getActivity());
 		    cordovaWebview.getSettings().setJavaScriptEnabled(true);
         	    cordovaWebview.addJavascriptInterface(jsInterface, "TECSYS");
