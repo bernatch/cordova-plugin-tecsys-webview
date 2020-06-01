@@ -62,6 +62,12 @@ public class TecsysWebview extends CordovaPlugin {
     private static final String TAG = TecsysWebview.class.getSimpleName();
 	
     private WebView cordovaWebview;
+    private static CordovaWebView cWebView = null;
+	
+    @Override
+    public void initialize (CordovaInterface cordova, CordovaWebView webView) {
+        cWebView = super.webView;
+    }
 
     // Binding a Cordova string to a java method
     @Override
@@ -90,7 +96,7 @@ public class TecsysWebview extends CordovaPlugin {
 		    final JavaScriptInterface jsInterface = new JavaScriptInterface(cordova.getActivity());
 		    //cordovaWebview.getSettings().setJavaScriptEnabled(true);
         	    //cordovaWebview.addJavascriptInterface(jsInterface, "TECSYS");
-		    webView.addJavascriptInterface(jsInterface, "TECSYS");
+		    cWebView.addJavascriptInterface(jsInterface, "TECSYS");
 		    Log.d(TAG, "jsInterface setup");
 		}
 	    };
