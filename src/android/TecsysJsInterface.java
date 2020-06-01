@@ -79,14 +79,14 @@ public class TecsysJsInterface implements OnInitListener {
 	boolean ttsInitialized_ = false;
 
 	TecsysJsInterface (Context context, final CallbackContext callbackContext) {
-	   context_ = context;
-	   callbackContext_ = callbackContext;
-	   tts_ = new TextToSpeech(context, this);
+	   //context_ = context;
+	   //callbackContext_ = callbackContext;
+	   //tts_ = new TextToSpeech(context, this);
 	}
 
 	@JavascriptInterface
 	public void speak(String message){
-	   speakTTS(message);
+	   //speakTTS(message);
 	}
 
 	@Override
