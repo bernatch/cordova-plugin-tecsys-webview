@@ -106,6 +106,7 @@ public class TecsysJsInterface implements OnInitListener {
 
 	private void speakTTS(String message) throws NullPointerException {
 
+		/*
 		String text = message;
 		String locale = "en-US";
 		double rate = 1.0;
@@ -138,5 +139,6 @@ public class TecsysJsInterface implements OnInitListener {
 		}
 
 		tts_.speak(text, TextToSpeech.QUEUE_FLUSH, ttsParams);
+		*/
 	}
 }
