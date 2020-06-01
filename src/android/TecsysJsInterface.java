@@ -64,7 +64,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.*;
 
-public class TecsysJscriptInterface implements OnInitListener {
+public class TecsysJsInterface implements OnInitListener {
 
 	public static final String ERR_INVALID_OPTIONS = "ERR_INVALID_OPTIONS";
 	public static final String ERR_NOT_INITIALIZED = "ERR_NOT_INITIALIZED";
@@ -75,7 +75,7 @@ public class TecsysJscriptInterface implements OnInitListener {
 	TextToSpeech tts = null;
 	boolean ttsInitialized = false;
 
-	TecsysJscriptInterface(Context c) {
+	TecsysJsInterface (Context c) {
 	   mContext = c;
 	   tts = new TextToSpeech(c, this);
 	}
