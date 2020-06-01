@@ -95,6 +95,7 @@ public class TecsysJsInterface implements OnInitListener {
 			Log.d(TAG, "TextToSpeech NOT SUCCESS");
 			tts_ = null;
 		} else {
+			/*
 			Log.d(TAG, "TextToSpeech SUCCESS");
 			// warm up the tts engine with an empty string
 			HashMap<String, String> ttsParams = new HashMap<String, String>();
@@ -106,6 +107,7 @@ public class TecsysJsInterface implements OnInitListener {
 			tts_.speak("", TextToSpeech.QUEUE_FLUSH, ttsParams);
 
 			ttsInitialized_ = true;
+			*/
 		}
 	}
 
