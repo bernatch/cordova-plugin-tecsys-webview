@@ -64,7 +64,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.*;
 
-public class TecsysJsInterface implements OnInitListener {
+public class TecsysJsInterface /* implements OnInitListener */ {
 
 	private static final String TAG = TecsysJsInterface.class.getSimpleName();
 	
