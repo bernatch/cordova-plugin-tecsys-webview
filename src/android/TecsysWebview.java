@@ -64,12 +64,10 @@ public class TecsysWebview extends CordovaPlugin {
     private WebView cordovaWebview;
     private static CordovaWebView cWebView = null;
 	
-	/*
     @Override
-    public void initialize (CordovaInterface cordova, CordovaWebView webView) {
-        cWebView = super.webView;
+    public void initialize(CordovaInterface cordova, CordovaWebView webView) {
+        super.initialize(cordova, webView);
     }
-	*/
 
     // Binding a Cordova string to a java method
     @Override
