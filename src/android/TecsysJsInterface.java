@@ -78,7 +78,7 @@ public class TecsysJsInterface implements OnInitListener {
 	TextToSpeech tts_ = null;
 	boolean ttsInitialized_ = false;
 
-	TecsysJsInterface (Context context, CallbackContext callbackContext) {
+	TecsysJsInterface (Context context, final CallbackContext callbackContext) {
 	   context_ = context;
 	   callbackContext_ = callbackContext;
 	   tts_ = new TextToSpeech(context, this);
