@@ -64,7 +64,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.*;
 
-public class TecsysJsInterface /* implements OnInitListener */ {
+public class TecsysJsInterface implements OnInitListener {
 
 	private static final String TAG = TecsysJsInterface.class.getSimpleName();
 	
@@ -79,9 +79,9 @@ public class TecsysJsInterface /* implements OnInitListener */ {
 	boolean ttsInitialized_ = false;
 
 	TecsysJsInterface (Context context, final CallbackContext callbackContext) {
-	   //context_ = context;
-	   //callbackContext_ = callbackContext;
-	   //tts_ = new TextToSpeech(context, this);
+	   context_ = context;
+	   callbackContext_ = callbackContext;
+	   tts_ = new TextToSpeech(context, this);
 	}
 
 	/*
@@ -91,7 +91,6 @@ public class TecsysJsInterface /* implements OnInitListener */ {
 	}
 	*/
 
-	/*
 	@Override
 	public void onInit(int status) {
 		if (status != TextToSpeech.SUCCESS) {
@@ -106,7 +105,6 @@ public class TecsysJsInterface /* implements OnInitListener */ {
 			ttsInitialized_ = true;
 		}
 	}
-	*/
 
 	/*
 	private void speakTTS(String message) throws NullPointerException {
