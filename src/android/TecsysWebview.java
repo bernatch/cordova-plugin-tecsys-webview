@@ -58,7 +58,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 
-android.widget.LinearLayout
+android.widget.LinearLayout;
 
 public class TecsysWebview extends CordovaPlugin {
 
