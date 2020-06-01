@@ -66,6 +66,8 @@ import java.util.*;
 
 public class TecsysJsInterface implements OnInitListener {
 
+	private static final String TAG = TecsysJsInterface.class.getSimpleName();
+	
 	public static final String ERR_INVALID_OPTIONS = "ERR_INVALID_OPTIONS";
 	public static final String ERR_NOT_INITIALIZED = "ERR_NOT_INITIALIZED";
 	public static final String ERR_ERROR_INITIALIZING = "ERR_ERROR_INITIALIZING";
