@@ -99,7 +99,7 @@ public class TecsysJsInterface implements OnInitListener {
 			// warm up the tts engine with an empty string
 			HashMap<String, String> ttsParams = new HashMap<String, String>();
 			ttsParams.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, "");
-			//tts_.setLanguage(new Locale("en", "US"));
+			tts_.setLanguage(new Locale("en", "US"));
 			tts_.speak("", TextToSpeech.QUEUE_FLUSH, ttsParams);
 
 			ttsInitialized_ = true;
