@@ -73,13 +73,15 @@ public class TecsysJsInterface implements OnInitListener {
 	public static final String ERR_ERROR_INITIALIZING = "ERR_ERROR_INITIALIZING";
 	public static final String ERR_UNKNOWN = "ERR_UNKNOWN";
 
-	Context mContext;
-	TextToSpeech tts = null;
-	boolean ttsInitialized = false;
+	Context context_;
+	CallbackContext callbackContext_;
+	TextToSpeech tts_ = null;
+	boolean ttsInitialized_ = false;
 
-	TecsysJsInterface (Context c) {
-	   mContext = c;
-	   tts = new TextToSpeech(c, this);
+	TecsysJsInterface (Context context, CallbackContext callbackContext) {
+	   context_ = context;
+	   callbackContext_ = callbackContext;
+	   tts_ = new TextToSpeech(context, this);
 	}
 
 	@JavascriptInterface
@@ -90,15 +92,15 @@ public class TecsysJsInterface implements OnInitListener {
 	@Override
 	public void onInit(int status) {
 		if (status != TextToSpeech.SUCCESS) {
-			tts = null;
+			tts_ = null;
 		} else {
 			// warm up the tts engine with an empty string
 			HashMap<String, String> ttsParams = new HashMap<String, String>();
 			ttsParams.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, "");
-			tts.setLanguage(new Locale("en", "US"));
-			tts.speak("", TextToSpeech.QUEUE_FLUSH, ttsParams);
+			tts_.setLanguage(new Locale("en", "US"));
+			tts_.speak("", TextToSpeech.QUEUE_FLUSH, ttsParams);
 
-			ttsInitialized = true;
+			ttsInitialized_ = true;
 		}
 	}
 
@@ -108,33 +110,33 @@ public class TecsysJsInterface implements OnInitListener {
 		String locale = "en-US";
 		double rate = 1.0;
 
-		if (tts == null) {
+		if (tts_ == null) {
 			Log.d(TAG, "showToast");
-			Toast.makeText(mContext, "TTS NULL", Toast.LENGTH_SHORT).show();
+			Toast.makeText(context_, "TTS NULL", Toast.LENGTH_SHORT).show();
 			
 			return;
 		}
 
-		if (!ttsInitialized) {
+		if (!ttsInitialized_) {
 			Log.d(TAG, "showToast");
-			Toast.makeText(mContext, "TTS NOT INITIALIZED", Toast.LENGTH_SHORT).show();
+			Toast.makeText(context_, "TTS NOT INITIALIZED", Toast.LENGTH_SHORT).show();
 
 			return;
 		}
 
 		HashMap<String, String> ttsParams = new HashMap<String, String>();
-		ttsParams.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, callbackContext.getCallbackId());
+		ttsParams.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, callbackContext_.getCallbackId());
 
 		String[] localeArgs = locale.split("-");
-		tts.setLanguage(new Locale(localeArgs[0], localeArgs[1]));
+		tts_.setLanguage(new Locale(localeArgs[0], localeArgs[1]));
 
 		if (Build.VERSION.SDK_INT >= 27) {
-			tts.setSpeechRate((float) rate * 0.7f);
+			tts_.setSpeechRate((float) rate * 0.7f);
 		} 
 		else {
-			tts.setSpeechRate((float) rate);
+			tts_.setSpeechRate((float) rate);
 		}
 
-		tts.speak(text, TextToSpeech.QUEUE_FLUSH, ttsParams);
+		tts_.speak(text, TextToSpeech.QUEUE_FLUSH, ttsParams);
 	}
 }
