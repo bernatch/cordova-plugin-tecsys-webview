@@ -102,7 +102,7 @@ public class TecsysWebview extends CordovaPlugin {
 			try{
 		    cordovaWebview.addJavascriptInterface(jsInterface, "TECSYS");
 			}
-			catch(Eception err) {
+			catch(Exception err) {
 				Log.d(TAG, "error w/ jsInterface setup");
 			}
 		    Log.d(TAG, "jsInterface setup");
