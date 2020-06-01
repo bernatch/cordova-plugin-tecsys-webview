@@ -58,6 +58,8 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 
+android.widget.LinearLayout
+
 public class TecsysWebview extends CordovaPlugin {
 
     private static final String TAG = TecsysWebview.class.getSimpleName();
@@ -70,7 +72,7 @@ public class TecsysWebview extends CordovaPlugin {
         super.initialize(cordova, webView);
 	//cWebView = webView;
 	//cordovaWebview = (WebView) webView.getEngine().getView();
-	cordovaWebview = (WebView) webView.getView();
+	//cordovaWebview = (WebView) webView.getView();
     }
 
     // Binding a Cordova string to a java method
@@ -99,8 +101,9 @@ public class TecsysWebview extends CordovaPlugin {
 		    //cordovaWebview = (WebView) cordova.getActivity().getCurrentFocus();
 		    final JavaScriptInterface jsInterface = new JavaScriptInterface(cordova.getActivity());
 		    //cordovaWebview.getSettings().setJavaScriptEnabled(true);
-        	    //cordovaWebview.addJavascriptInterface(jsInterface, "TECSYS");
-		    //cordovaWebview.addJavascriptInterface(jsInterface, "TECSYS");
+		    LinearLayout main = new LinearLayout(cordova.getActivity());
+		    cordovaWebview = (WebView) main.findViewById(Integer.valueOf(6));
+		    cordovaWebview.addJavascriptInterface(jsInterface, "TECSYS");
 		    Log.d(TAG, "jsInterface setup");
 		}
 	    };
