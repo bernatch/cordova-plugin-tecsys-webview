@@ -95,19 +95,14 @@ public class TecsysJsInterface implements OnInitListener {
 			Log.d(TAG, "TextToSpeech NOT SUCCESS");
 			tts_ = null;
 		} else {
-			/*
-			Log.d(TAG, "TextToSpeech SUCCESS");
+
 			// warm up the tts engine with an empty string
 			HashMap<String, String> ttsParams = new HashMap<String, String>();
-			Log.d(TAG, "TextToSpeech put param");
 			ttsParams.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, "");
-			Log.d(TAG, "TextToSpeech set lang");
 			//tts_.setLanguage(new Locale("en", "US"));
-			Log.d(TAG, "TextToSpeech speak");
 			tts_.speak("", TextToSpeech.QUEUE_FLUSH, ttsParams);
 
 			ttsInitialized_ = true;
-			*/
 		}
 	}
 
