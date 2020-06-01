@@ -70,7 +70,7 @@ public class TecsysWebview extends CordovaPlugin {
         super.initialize(cordova, webView);
 	//cWebView = webView;
 	//cordovaWebview = (WebView) webView.getEngine().getView();
-	webView.getEngine().getView();
+	(WebView) webView.getEngine().getView();
     }
 
     // Binding a Cordova string to a java method
