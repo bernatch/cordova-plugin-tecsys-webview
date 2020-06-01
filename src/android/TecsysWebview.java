@@ -79,7 +79,7 @@ public class TecsysWebview extends CordovaPlugin {
 
     // Binding a Cordova string to a java method
     @Override
-    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
         if (action.equals("init")) {
             //this.init(callbackContext);
             return true;
@@ -135,6 +135,7 @@ public class TecsysWebview extends CordovaPlugin {
     }
 	*/
     
+	/*
     public class JavaScriptInterface {
 	Context mContext;
 
@@ -148,4 +149,5 @@ public class TecsysWebview extends CordovaPlugin {
 	   Toast.makeText(mContext, webMessage, Toast.LENGTH_SHORT).show();
 	}
     }
+	*/
 }
