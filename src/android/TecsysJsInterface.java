@@ -74,7 +74,7 @@ public class TecsysJsInterface implements OnInitListener {
 	public static final String ERR_UNKNOWN = "ERR_UNKNOWN";
 
 	Context context_;
-	final CallbackContext callbackContext_;
+	//final CallbackContext callbackContext_;
 	TextToSpeech tts_ = null;
 	boolean ttsInitialized_ = false;
 
