@@ -84,12 +84,10 @@ public class TecsysJsInterface implements OnInitListener {
 	   tts_ = new TextToSpeech(context, this);
 	}
 
-	/*
 	@JavascriptInterface
 	public void speak(String message){
-	   //speakTTS(message);
+	   speakTTS(message);
 	}
-	*/
 
 	@Override
 	public void onInit(int status) {
@@ -106,7 +104,6 @@ public class TecsysJsInterface implements OnInitListener {
 		}
 	}
 
-	/*
 	private void speakTTS(String message) throws NullPointerException {
 
 		String text = message;
@@ -142,5 +139,4 @@ public class TecsysJsInterface implements OnInitListener {
 
 		tts_.speak(text, TextToSpeech.QUEUE_FLUSH, ttsParams);
 	}
-*/
 }
