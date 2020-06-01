@@ -86,7 +86,7 @@ public class TecsysJsInterface implements OnInitListener {
 
 	@JavascriptInterface
 	public void speak(String message){
-	   speakTTS(message);
+	   textToSpeech(message);
 	}
 
 	@Override
@@ -106,9 +106,8 @@ public class TecsysJsInterface implements OnInitListener {
 		}
 	}
 
-	private void speakTTS(String message) throws NullPointerException {
+	private void textToSpeech(String text) throws NullPointerException {
 
-		String text = message;
 		String locale = "en-US";
 		double rate = 1.0;
 
