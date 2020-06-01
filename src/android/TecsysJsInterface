@@ -1,3 +1,5 @@
+package org.apache.cordova.tecsys.webview;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -68,7 +70,6 @@ public class TecsysJscriptInterface implements OnInitListener {
 	public static final String ERR_NOT_INITIALIZED = "ERR_NOT_INITIALIZED";
 	public static final String ERR_ERROR_INITIALIZING = "ERR_ERROR_INITIALIZING";
 	public static final String ERR_UNKNOWN = "ERR_UNKNOWN";
-
 
 	Context mContext;
 	TextToSpeech tts = null;
