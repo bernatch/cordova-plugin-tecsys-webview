@@ -84,14 +84,16 @@ public class TecsysJsInterface implements OnInitListener {
 	   //tts_ = new TextToSpeech(context, this);
 	}
 
+	/*
 	@JavascriptInterface
 	public void speak(String message){
 	   //speakTTS(message);
 	}
+	*/
 
+	/*
 	@Override
 	public void onInit(int status) {
-		/*
 		if (status != TextToSpeech.SUCCESS) {
 			tts_ = null;
 		} else {
@@ -103,12 +105,12 @@ public class TecsysJsInterface implements OnInitListener {
 
 			ttsInitialized_ = true;
 		}
-		*/
 	}
+	*/
 
+	/*
 	private void speakTTS(String message) throws NullPointerException {
 
-		/*
 		String text = message;
 		String locale = "en-US";
 		double rate = 1.0;
@@ -141,6 +143,6 @@ public class TecsysJsInterface implements OnInitListener {
 		}
 
 		tts_.speak(text, TextToSpeech.QUEUE_FLUSH, ttsParams);
-		*/
 	}
+*/
 }
