@@ -92,12 +92,17 @@ public class TecsysJsInterface implements OnInitListener {
 	@Override
 	public void onInit(int status) {
 		if (status != TextToSpeech.SUCCESS) {
+			Log.d(TAG, "TextToSpeech NOT SUCCESS");
 			tts_ = null;
 		} else {
+			Log.d(TAG, "TextToSpeech SUCCESS");
 			// warm up the tts engine with an empty string
 			HashMap<String, String> ttsParams = new HashMap<String, String>();
+			Log.d(TAG, "TextToSpeech put param");
 			ttsParams.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, "");
+			Log.d(TAG, "TextToSpeech set lang");
 			tts_.setLanguage(new Locale("en", "US"));
+			Log.d(TAG, "TextToSpeech speak");
 			tts_.speak("", TextToSpeech.QUEUE_FLUSH, ttsParams);
 
 			ttsInitialized_ = true;
@@ -111,16 +116,10 @@ public class TecsysJsInterface implements OnInitListener {
 		double rate = 1.0;
 
 		if (tts_ == null) {
-			Log.d(TAG, "showToast");
-			Toast.makeText(context_, "TTS NULL", Toast.LENGTH_SHORT).show();
-			
 			return;
 		}
 
 		if (!ttsInitialized_) {
-			Log.d(TAG, "showToast");
-			Toast.makeText(context_, "TTS NOT INITIALIZED", Toast.LENGTH_SHORT).show();
-
 			return;
 		}
 
