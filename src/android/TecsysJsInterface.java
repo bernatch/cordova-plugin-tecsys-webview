@@ -86,11 +86,12 @@ public class TecsysJsInterface implements OnInitListener {
 
 	@JavascriptInterface
 	public void speak(String message){
-	   speak(message);
+	   speakTTS(message);
 	}
 
 	@Override
 	public void onInit(int status) {
+		/*
 		if (status != TextToSpeech.SUCCESS) {
 			tts_ = null;
 		} else {
@@ -102,6 +103,7 @@ public class TecsysJsInterface implements OnInitListener {
 
 			ttsInitialized_ = true;
 		}
+		*/
 	}
 
 	private void speakTTS(String message) throws NullPointerException {
